@@ -14,4 +14,9 @@ describe('./musicians endpoint', () => {
     const response = await request(app).get('/musicians');
     expect(response.statusCode).toBe(200);
   });
+
+  test('DELETE /musicians/1 should delete the musician with id 1', async () => {
+    const response = await request(app).delete('/musicians/1');
+    expect(response.statusCode).toBe(200);
+  });
 });
