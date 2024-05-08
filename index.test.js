@@ -11,12 +11,12 @@ const seedMusician = require('./seedData');
 
 describe('./musicians endpoint', () => {
   test('endpoint should return a 200 status code', async () => {
-    const response = await request(app).get('/musicians');
+    const response = await request(app).get('/routes/musician_router');
     expect(response.statusCode).toBe(200);
   });
 
   test('DELETE /musicians/1 should delete the musician with id 1', async () => {
-    const response = await request(app).delete('/musicians/1');
+    const response = await request(app).delete('/routes/musician_router/1');
     expect(response.statusCode).toBe(200);
   });
 });
